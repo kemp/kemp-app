@@ -1,8 +1,7 @@
 {
-  "name": "personal-home-page",
+  "name": "kemp-app",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Personal site of Steven Kemp",
   "scripts": {
     "dev": "npm run development",
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
@@ -12,7 +11,7 @@
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "@rockhopper72",
   "license": "ISC",
   "devDependencies": {
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
