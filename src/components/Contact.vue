@@ -4,7 +4,7 @@
             Your message has been sent!
         </div>
 
-        <form v-if="!sent" action="" name="contact" method="POST" @submit.prevent="submitForm" data-netlify="true" ref="form">
+        <form v-if="!sent" action="" name="contact" method="POST" @submit.prevent="submitForm" netlify ref="form">
             <div class="input-group">
                 <label for="name">Name: *</label>
                 <input type="text" name="name" id="name" required :disabled="sending">
@@ -56,30 +56,3 @@
         }
     }
 </script>
-
-<style scoped lang="scss">
-    .contact-form {
-        max-width: 450px !important;
-    }
-
-    input[type=text], input[type=email], textarea {
-        width: 100%;
-        padding: 6px 4px;
-        margin-top: 2px;
-        border-radius: 3px;
-        border: 1px solid #ccc;
-        font-size: 1.125rem;
-        font-family: inherit;
-    }
-
-    .input-group {
-        margin-bottom: 0.5rem;
-    }
-
-    .alert-sent {
-        background: lightgreen;
-        border-radius: 8px;
-        border: 6px solid #01c901;
-        padding: 8px 10px;
-    }
-</style>

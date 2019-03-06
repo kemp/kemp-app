@@ -128,3 +128,28 @@ h2 {
   100% { transform: rotate(360deg); }
 }
 
+
+.contact-form {
+    max-width: 450px !important;
+
+    input[type=text], input[type=email], textarea {
+        width: 100%;
+        padding: 6px 4px;
+        margin-top: 2px;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+        font-size: 1.125rem;
+        font-family: inherit;
+    }
+
+    .input-group {
+        margin-bottom: 0.5rem;
+    }
+
+    .alert-sent {
+        background: lightgreen;
+        border-radius: 8px;
+        border: 6px solid #01c901;
+        padding: 8px 10px;
+    }
+}
