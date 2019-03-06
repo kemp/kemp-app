@@ -4,10 +4,10 @@ import nprogress from 'nprogress'
 
 Vue.use(VueRouter);
 
-const Home = () => import('./components/Home.vue');
-const Photos = () => import('./components/Photos.vue');
-const Projects = () => import('./components/Projects.vue');
-const Contact = () => import('./components/Contact.vue');
+import Home from './components/Home.vue';
+import Photos from './components/Photos.vue';
+import Projects from './components/Projects.vue';
+import Contact from './components/Contact.vue';
 
 const routes = [
     { path: '/', name: 'home', component: Home },
