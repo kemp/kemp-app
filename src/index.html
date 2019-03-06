@@ -21,8 +21,9 @@
 
         <router-view style="max-width: 600px; margin: 0 auto 4rem auto; text-align: left"></router-view>
     </div>
+    
     <!-- Form required for Netlify integration -->
-    <form name="contact" netlify hidden>
+    <form action="contact" name="contact" netlify hidden>
         <input type="text" name="name" />
         <input type="email" name="email" />
         <textarea name="message"></textarea>

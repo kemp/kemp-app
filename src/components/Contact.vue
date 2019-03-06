@@ -4,7 +4,7 @@
             Your message has been sent!
         </div>
 
-        <form v-if="!sent" action="" name="contact" method="POST" @submit.prevent="submitForm" netlify ref="form">
+        <form v-if="!sent" name="contact" method="POST" @submit.prevent="submitForm" netlify ref="form">
             <div class="input-group">
                 <label for="name">Name: *</label>
                 <input type="text" name="name" id="name" required :disabled="sending">
@@ -34,24 +34,30 @@
             }
         },
         methods: {
+            encode(data) {
+                return Object.keys(data)
+                    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+                    .join("&");
+            },
+
             submitForm(event) {
                 this.sending = true;
+                let form = this.$refs.form;
 
-                let data = new FormData();
-                data.append('name', this.$refs.form.name.value);
-                data.append('email', this.$refs.form.email.value);
-                data.append('message', this.$refs.form.message.value);
-
-                let xhr = new XMLHttpRequest();
-                xhr.open('POST', this.$refs.form.action, true);
-                xhr.onload = () => {
-                    // do something to response
-                    if (xhr.statusText === "OK") {
-                        this.sent = true;
-                        this.sending = false;
-                    }
-                };
-                xhr.send(data);
+                fetch("/", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: this.encode({
+                        "form-name": form.getAttribute("name"),
+                        "name": form.name.value,
+                        "email": form.email.value,
+                        "message": form.message.value,
+                    })
+                }).then(() => {
+                    this.sent = true;
+                    this.sending = false;
+                })
+                .catch(error => alert(error));
             }
         }
     }
