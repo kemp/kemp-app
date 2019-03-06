@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p>TODO: My Projects</p>
+        <p>Hey there! This section is still a work in progress.</p>
 
         <p>For now, check out <a href="https://github.com/rockhopper72">my GitHub</a>.</p>
     </div>
