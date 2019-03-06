@@ -1,3 +1,3 @@
 <template>
-    <p>Photos</p>
+    <p>TODO: Photos of me</p>
 </template>
