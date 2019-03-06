@@ -17,7 +17,7 @@
 
             <div class="input-group">
                 <label for="message">Message: *</label>
-                <textarea name="message" id="message" cols="30" rows="10" required :disabled="sending"></textarea>
+                <textarea name="message" id="message" cols="30" rows="10" required :disabled="sending" ref="message"></textarea>
             </div>
 
             <input type="submit" value="Submit" :disabled="sending" class="submit-button">
@@ -26,6 +26,8 @@
 </template>
 
 <script>
+    import autosize from 'autosize';
+
     export default {
         data: function () {
             return {
@@ -33,6 +35,11 @@
                 sending: false,
             }
         },
+
+        mounted() {
+            autosize(this.$refs.message);
+        },
+
         methods: {
             encode(data) {
                 return Object.keys(data)
