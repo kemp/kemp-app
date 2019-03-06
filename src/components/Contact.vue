@@ -20,7 +20,7 @@
                 <textarea name="message" id="message" cols="30" rows="10" required :disabled="sending"></textarea>
             </div>
 
-            <input type="submit" value="Submit" :disabled="sending">
+            <input type="submit" value="Submit" :disabled="sending" class="submit-button">
         </form>
     </div>
 </template>
