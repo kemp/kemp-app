@@ -13,5 +13,5 @@ let mix = require('laravel-mix');
 
 mix.js('src/app.js', 'dist/')
     .sass('src/app.scss', 'dist/')
-    .copy('src/index.html', 'dist/')
+    .copy('src/*.html', 'dist/')
     .setPublicPath('dist');
