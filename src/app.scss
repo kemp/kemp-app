@@ -193,7 +193,7 @@ h2 {
 
 .photo {
     width: 50%;
-    background: url('pics/me.jpg') $primary-dark;
+    background: url('pics/me.jpg'), url('pics/me-tiny.jpg') $primary-dark;
     background-size: auto;
     background-size: cover;
     height: 100vh;
