@@ -10,18 +10,27 @@
     <script src="app.js" defer async></script>
 </head>
 <body>
-    <div id="app">
-        <h1>Steven Kemp</h1>
-        <h2>Web Developer, Student @ KSU, Biking aficionado</h2>
+    <div class="photo">
+        &nbsp;
+    </div>
+    <div class="container">
+        <div class="space-taker">
+            &nbsp;
+        </div>
+        
+        <div id="app">
+            <h1>Steven Kemp</h1>
+            <h2>Web Developer, Student @ KSU, Biking aficionado</h2>
 
-        <ul v-cloak class="navigation" style="padding: 0; list-style: none; margin-top: 0.75rem; margin-bottom: 1.25rem">
-            <li><router-link :to="{ name: 'home' }" exact>Home</router-link></li>
-            <li><router-link :to="{ name: 'photos' }">Photos</router-link></li>
-            <li><router-link :to="{ name: 'projects' }">Projects</router-link></li>
-            <li><router-link :to="{ name: 'contact' }">Contact</router-link></li>
-        </ul>
+            <ul v-cloak class="navigation" style="padding: 0; list-style: none; margin-top: 0.75rem; margin-bottom: 1.25rem">
+                <li><router-link :to="{ name: 'home' }" exact>Home</router-link></li>
+                <li><router-link :to="{ name: 'photos' }">Photos</router-link></li>
+                <li><router-link :to="{ name: 'projects' }">Projects</router-link></li>
+                <li><router-link :to="{ name: 'contact' }">Contact</router-link></li>
+            </ul>
 
-        <router-view style="max-width: 600px; margin: 0 auto 4rem auto; text-align: left"></router-view>
+            <router-view style="max-width: 600px; margin: 0 auto 4rem auto; text-align: left"></router-view>
+        </div>
     </div>
     
     <!-- Form required for Netlify integration -->
