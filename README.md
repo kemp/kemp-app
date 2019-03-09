@@ -1,4 +1,4 @@
-# Kemp.app [![Netlify Status](https://api.netlify.com/api/v1/badges/3227203f-8a4a-41ea-9139-b99fadbd5883/deploy-status)](https://app.netlify.com/sites/ecstatic-thompson-d45387/deploys)
+Kemp.app [![Netlify Status](https://api.netlify.com/api/v1/badges/3227203f-8a4a-41ea-9139-b99fadbd5883/deploy-status)](https://app.netlify.com/sites/ecstatic-thompson-d45387/deploys)
 ======
 
 **Kemp.app** is my personal website.
