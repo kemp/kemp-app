@@ -5,30 +5,34 @@
     <title>Steven Kemp</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="//fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="css/app.css">
     <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- There is no favicon -->
     <script src="app.js" defer async></script>
 </head>
-<body>
-    <div class="photo">
+<body class="bg-primary-light m-0 text-primary-dark font-sans">
+    <!-- NProgress loader will appear. PurgeCSS whitelist: "#nprogress" ".bar" ".peg" ".spinner" ".spinner-icon" ".nprogress-custom-parent" ".nprogress-custom-parent #nprogress .spinner" ".nprogress-custom-parent #nprogress .bar" -->
+    <div class="photo hidden md:block bg-cover h-screen fixed w-1/2">
         &nbsp;
     </div>
-    <div class="container">
-        <div class="space-taker">
+    <div class="flex">
+        <div class="hidden md:block w-1/2">
             &nbsp;
         </div>
         
-        <div id="app">
-            <h1>Steven Kemp</h1>
-            <h2>Web Developer, Student @ KSU, Biking aficionado</h2>
+        <div id="app" class="w-full md:w-1/2 px-2 mt-8">
+            <h1 class="text-4xl md:text-5xl font-cursive text-center">Steven Kemp</h1>
+            <h2 class="font-mono text-lg mt-4 text-center">Web Developer, Student @ KSU, Biking aficionado</h2>
 
-            <ul v-cloak class="navigation" style="padding: 0; list-style: none; margin-top: 0.75rem; margin-bottom: 1.25rem">
+            <ul v-cloak class="navigation text-center list-reset mt-3 mb-5">
+                <!-- Active links will have "router-link-active" -->
                 <li><router-link :to="{ name: 'home' }" exact>Home</router-link></li>
                 <li><router-link :to="{ name: 'projects' }">Projects</router-link></li>
                 <li><router-link :to="{ name: 'contact' }">Contact</router-link></li>
             </ul>
 
-            <router-view style="max-width: 600px; margin: 0 auto 4rem auto; text-align: left"></router-view>
+            <div class="max-w-md mx-4">
+                <router-view class="mb-16 mx-auto"></router-view>
+            </div>
         </div>
     </div>
     

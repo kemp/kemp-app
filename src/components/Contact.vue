@@ -1,5 +1,5 @@
 <template>
-    <div class="contact-form">
+    <div class="contact-form max-w-sm">
         <div v-if="sent" class="alert-sent">
             Your message has been sent!
         </div>
@@ -7,20 +7,20 @@
         <form v-if="!sent" name="contact" method="POST" @submit.prevent="submitForm" netlify ref="form">
             <div class="input-group">
                 <label for="name">Name: *</label>
-                <input type="text" name="name" id="name" required :disabled="sending">
+                <input class="input" type="text" name="name" id="name" required :disabled="sending">
             </div>
 
             <div class="input-group">
                 <label for="email">Email: *</label>
-                <input type="email" name="email" id="email" required :disabled="sending">
+                <input class="input" type="email" name="email" id="email" required :disabled="sending">
             </div>
 
             <div class="input-group">
                 <label for="message">Message: *</label>
-                <textarea name="message" id="message" cols="30" rows="10" required :disabled="sending" ref="message"></textarea>
+                <textarea class="input resize-none" name="message" id="message" cols="30" rows="10" required :disabled="sending" ref="message"></textarea>
             </div>
 
-            <input type="submit" value="Submit" :disabled="sending" class="submit-button">
+            <input class="submit-button bg-primary-dark text-white border border-primary-light py-2 px-4 cursor-pointer rounded shadow appearance-none" type="submit" value="Submit" :disabled="sending">
         </form>
     </div>
 </template>

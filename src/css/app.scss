@@ -1,0 +1,111 @@
+$primary-dark: midnightblue;
+$primary-light: ghostwhite;
+
+a {
+    @apply text-primary-dark;
+}
+
+[v-cloak] {
+    @apply hidden;
+}
+
+.navigation li {
+    @apply inline-block;
+
+    a {
+        @apply no-underline text-primary-dark py-2 px-4 inline-block border-black border-b-2;
+
+        &.router-link-active {
+            @apply border-b-4 text-grey-dark;
+        }
+    }
+}
+
+
+
+.contact-form {
+    .input {
+        @apply w-full py-2 px-1 mb-1 rounded border border-grey-light text-lg font-sans;
+    }
+
+    .input-group {
+        @apply mb-2;
+    }
+
+    // TODO: Convert to seperate page
+    .alert-sent {
+        background: lightgreen; // green-light
+        border-radius: 8px;
+        border: 6px solid #01c901; // green
+        padding: 8px 10px;
+    }
+}
+
+.photo {
+    background: url('../pics/me.jpg'), url('../pics/me-tiny.jpg') $primary-dark;
+    background-position: center 20%;
+}
+
+/**
+ * This injects Tailwind's base styles, which is a combination of
+ * Normalize.css and some additional base styles.
+ *
+ * You can see the styles here:
+ * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/preflight";
+ */
+@tailwind preflight;
+
+/**
+ * This injects any component classes registered by plugins.
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/components";
+ */
+@tailwind components;
+
+/**
+ * Here you would add any of your custom component classes; stuff that you'd
+ * want loaded *before* the utilities so that the utilities could still
+ * override them.
+ *
+ * Example:
+ *
+ * .btn { ... }
+ * .form-input { ... }
+ *
+ * Or if using a preprocessor or `postcss-import`:
+ *
+ * @import "components/buttons";
+ * @import "components/forms";
+ */
+@import "./components/nprogress";
+
+/**
+ * This injects all of Tailwind's utility classes, generated based on your
+ * config file.
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/utilities";
+ */
+@tailwind utilities;
+
+/**
+ * Here you would add any custom utilities you need that don't come out of the
+ * box with Tailwind.
+ *
+ * Example :
+ *
+ * .bg-pattern-graph-paper { ... }
+ * .skew-45 { ... }
+ *
+ * Or if using a preprocessor or `postcss-import`:
+ *
+ * @import "utilities/background-patterns";
+ * @import "utilities/skew-transforms";
+ */
