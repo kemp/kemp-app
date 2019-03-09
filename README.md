@@ -15,6 +15,7 @@ In this project, I use:
 - [Netlify](https://www.netlify.com/) (see my [netlify.toml](netlify.toml))
 - [Laravel Mix](https://laravel-mix.com/)
 - [Laravel Valet](https://laravel.com/docs/valet)
+- [Tailwind CSS](https://tailwindcss.com/docs/what-is-tailwind/)
 
 In addition, thanks to:
 - [ImageOptim](https://imageoptim.com/mac), for helping me squeeze bytes out of my images
