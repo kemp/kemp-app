@@ -28,6 +28,7 @@ mix.js('src/app.js', 'dist/')
     .sass('src/css/app.scss', 'dist/css')
     .copy('src/*.html', 'dist/')
     .copy('src/pics/', 'dist/pics')
+    .copy('src/fonts/', 'dist/fonts')
     .options({
         processCssUrls: false,
         postCss: [
