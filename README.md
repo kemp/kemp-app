@@ -3,7 +3,7 @@ Kemp.app [![Netlify Status](https://api.netlify.com/api/v1/badges/3227203f-8a4a-
 
 **Kemp.app** is my personal website.
 
-See it **[live](https://kemp.app)**.
+See it live at: **[https://www.kemp.app](https://www.kemp.app)**.
 
 ## Technology
 This website, while personal, can be used to showcase some of my development skills.
