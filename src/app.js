@@ -29,18 +29,18 @@ router.afterEach((to, from) => {
 });
 
 const app = new Vue({
-	data() {
-		return {
-			transition: 'slide-right',
-		};
-	},
+    data() {
+        return {
+            transition: 'slide-right',
+        };
+    },
     router,
     watch: {
         '$route' (to, from) {
-      	    const routePaths = routes.map(route => route.path);
-    	    const toPos = routePaths.indexOf(to.path);
-    	    const fromPos = routePaths.indexOf(from.path);
-    	    this.transition = toPos < fromPos ? 'slide-right' : 'slide-left';
+            const routePaths = routes.map(route => route.path);
+            const toPos = routePaths.indexOf(to.path);
+            const fromPos = routePaths.indexOf(from.path);
+            this.transition = toPos < fromPos ? 'slide-right' : 'slide-left';
         }
     },
 }).$mount('#app')
