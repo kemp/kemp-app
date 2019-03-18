@@ -1,5 +1,5 @@
 <template>
-    <div class="contact-form w-full">
+    <div class="contact-form max-w-sm">
         <div v-if="sent" class="alert-sent">
             Your message has been sent!
         </div>

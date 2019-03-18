@@ -28,9 +28,9 @@
                 <li><router-link :to="{ name: 'contact' }">Contact</router-link></li>
             </ul>
 
-            <div class="relative max-w-md mx-4 mb-16">
-                <transition :name="transition">
-                    <router-view class="view"></router-view>
+            <div class="max-w-md px-4 mx-auto">
+                <transition :name="transition" mode="out-in">
+                    <router-view class="mb-16 mx-auto"></router-view>
                 </transition>
             </div>
         </div>
