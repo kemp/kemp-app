@@ -35,7 +35,8 @@ mix.js('src/app.js', 'dist/')
             tailwindcss('./tailwind.js'),
         ]
     })
-    .setPublicPath('dist');
+    .setPublicPath('dist')
+    .disableSuccessNotifications();
 
 // Only run PurgeCSS during production builds for faster development builds
 // and so you still have the full set of utilities available during
