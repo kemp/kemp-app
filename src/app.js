@@ -9,9 +9,30 @@ import Projects from './components/Projects.vue';
 import Contact from './components/Contact.vue';
 
 const routes = [
-    { path: '/', name: 'home', component: Home },
-    { path: '/projects', name: 'projects', component: Projects },
-    { path: '/contact', name: 'contact', component: Contact },
+    {
+        path: '/',
+        name: 'home', 
+        component: Home,
+        meta: {
+            title: 'Steven Kemp',
+        }
+    },
+    { 
+        path: '/projects', 
+        name: 'projects', 
+        component: Projects,
+        meta: {
+            title: 'Projects - Steven Kemp',
+        }
+    },
+    { 
+        path: '/contact', 
+        name: 'contact', 
+        component: Contact,
+        meta: {
+            title: 'Contact - Steven Kemp',
+        }
+    },
 ]
 
 const router = new VueRouter({
@@ -20,6 +41,10 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
+    if (to.meta.title) {
+        document.title = to.meta.title;
+    }
+
     nprogress.start();
     next();
 });
