@@ -6,6 +6,7 @@ $primary-light: ghostwhite;
 @font-face {
   font-family: 'Pacifico';
   font-style: normal;
+  font-display: fallback;
   font-weight: 400;
   src: url('../fonts/pacifico-v13-latin-regular.eot'); /* IE9 Compat Modes */
   src: local('Pacifico Regular'), local('Pacifico-Regular'),
