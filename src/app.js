@@ -4,6 +4,8 @@ import nprogress from 'nprogress'
 
 Vue.use(VueRouter);
 
+import App from './components/App.vue';
+
 import Home from './components/Home.vue';
 import Projects from './components/Projects.vue';
 import Contact from './components/Contact.vue';
@@ -68,4 +70,6 @@ const app = new Vue({
             this.transition = toPos < fromPos ? 'slide-right' : 'slide-left';
         }
     },
-}).$mount('#app')
+    el: '#app',
+    render: createElement => createElement(App),
+});

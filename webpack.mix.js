@@ -45,6 +45,11 @@ mix.js('src/app.js', 'dist/')
 // development.
 if (mix.inProduction()) {
     mix.webpackConfig({
+        resolve: {
+            alias: {
+                'vue$': 'vue/dist/vue.runtime.min.js'
+            }
+        },
         plugins: [
             new PurgecssPlugin({
 
