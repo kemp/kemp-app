@@ -22,15 +22,22 @@ In addition, thanks to:
 - [nprogress](https://github.com/rstacruz/nprogress)
 - [autosize](https://github.com/jackmoore/autosize)
 
-## Build
+## Installation
+Once you have cloned and `cd`'ed into the project, install NPM dependencies using [Yarn](https://yarnpkg.com/lang/en/docs/install/):
+
+```
+yarn
+```
+
+### Build
 To build this project, run:
 
 ```
-npm run production
+yarn dev
 
 # or
 
-npm run development
+yarn prod
 ```
 
 Output files will be in `/dist`.
