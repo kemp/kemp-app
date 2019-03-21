@@ -3,12 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Steven Kemp</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="icons/favicon-128.png">
+    <link rel="apple-touch-icon" sizes="256x256" href="icons/favicon-256.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#191970">
+
     <link rel="stylesheet" href="css/app.css">
-    <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- There is no favicon -->
     <script src="app.js" defer async></script>
 </head>
 <body class="bg-primary-light m-0 text-primary-dark font-sans">
+    <!--[if IE]>
+        <p class="w-full fixed z-50 pin-b bg-red-light text-white rounded p-8">You are using an <strong>outdated</strong> browser. Please <a class="text-white" href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+
     <div class="photo hidden md:block bg-cover h-screen fixed w-1/2">
         &nbsp;
     </div>
@@ -16,7 +28,7 @@
         <div class="hidden md:block w-1/2">
             &nbsp;
         </div>
-        
+
         <div id="app" class="w-full md:w-1/2 px-2 mt-8">
             <h1 class="text-4xl md:text-5xl font-cursive text-center">Steven Kemp</h1>
             <h2 class="font-mono text-lg mt-4 text-center">Web Developer, Student @ KSU, Biking aficionado</h2>
@@ -35,7 +47,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Form required for Netlify integration -->
     <form action="contact" name="contact" netlify hidden>
         <input type="text" name="name" />
