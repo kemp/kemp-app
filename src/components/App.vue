@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full md:w-1/2 px-2 mt-8">
+    <div class="w-full md:w-1/2 px-2 pt-8 overflow-y-scroll scrolling-touch max-h-screen">
         <h1 class="text-4xl md:text-5xl font-cursive text-center">Steven Kemp</h1>
         <h2 class="font-mono text-lg mt-4 text-center">Web Developer, Student @ KSU, Biking aficionado</h2>
 
