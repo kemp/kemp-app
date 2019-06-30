@@ -1,19 +1,17 @@
 <template>
     <div>
-        <div class="mb-4" v-for="project in projects">
-            <h2 class="font-cursive">{{ project.name }}</h2>
+        <div class="mb-6" v-for="project in projects">
+            <h2 class="font-cursive pb-2">{{ project.name }}</h2>
 
-            <p>{{ project.description }}</p>
+            <p class="pb-2">{{ project.description }}</p>
 
-            <p v-if="project.sourceUrl">The source code is available <a :href="project.sourceUrl">on GitHub</a>.</p>
+            <p class="pb-2" v-if="project.sourceUrl">The source code is available <a :href="project.sourceUrl">on GitHub</a>.</p>
 
-            <p v-if="project.keywords"><strong>Keywords:</strong> <span v-for="(keyword, index) in project.keywords"><span v-if="index != 0">, </span>{{ keyword }}</span></p>
+            <p class="pb-2" v-if="project.keywords"><strong>Keywords:</strong> <span v-for="(keyword, index) in project.keywords"><span v-if="index != 0">, </span>{{ keyword }}</span></p>
 
-            <p v-if="project.liveUrl"><strong>See it live:</strong> <a :href="project.liveUrl">{{ project.name }}</a></p>
+            <p class="pb-2" v-if="project.liveUrl"><strong>See it live:</strong> <a :href="project.liveUrl">{{ project.name }}</a></p>
         </div>
-
-        <p>&nbsp;</p>
-
+        
         <p>For more projects, check out <a href="https://github.com/rockhopper72">my GitHub</a>.</p>
     </div>
 </template>
