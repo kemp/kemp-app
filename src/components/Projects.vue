@@ -14,7 +14,7 @@
 
             <p class="pb-2" v-if="project.sourceUrl">The source code is available <a :href="project.sourceUrl">on GitHub <img src="/icons/github.svg" class="h-4 rounded-full" alt=""></a>.</p>
 
-            <p class="pb-2" v-if="project.keywords"><strong>Keywords:</strong> <span v-for="(keyword, index) in project.keywords"><span v-if="index != 0">, </span>{{ keyword }}</span></p>
+            <p class="pb-2" v-if="project.keywords"><strong>Keywords:</strong> <span v-for="(keyword, index) in project.keywords"><span v-if="index != 0">, </span><span :class="{ 'bg-yellow-light': filteredKeywords.includes(keyword)}">{{ keyword }}</span></span></p>
 
             <p class="pb-2" v-if="project.liveUrl"><strong>See it live:</strong> <a :href="project.liveUrl" target="_blank">{{ project.name }}<img src="/icons/open_in_new.svg" class="h-4" alt=""></a></p>
         </div>
