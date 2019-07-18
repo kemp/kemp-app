@@ -11,7 +11,7 @@
         </ul>
 
         <div class="max-w-md px-4 mx-auto">
-            <transition :name="transition" mode="out-in">
+            <transition :name="$parent.transition" mode="out-in">
                 <router-view class="mb-16 mx-auto"></router-view>
             </transition>
         </div>
