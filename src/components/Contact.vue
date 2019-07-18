@@ -1,26 +1,30 @@
 <template>
     <div class="contact-form max-w-sm">
-        <div v-if="sent" class="alert-sent">
-            Your message has been sent!
-        </div>
+        <transition name="slide-right">
+            <div v-if="sent" class="alert-sent mb-4">
+                <p>Your message has been sent! I'll get in touch with you shortly.</p>
+            </div>
+        </transition>
 
-        <form v-if="!sent" name="contact" method="POST" @submit.prevent="submitForm" netlify ref="form">
+        <p class="mb-4">Want to get in touch? Great! Use this form and I'll get back to you as soon as possible.</p>
+
+        <form name="contact" method="POST" @submit.prevent="submitForm" netlify ref="form">
             <div class="input-group">
                 <label for="name">Name: *</label>
-                <input class="input" type="text" name="name" id="name" required :disabled="sending">
+                <input class="input" type="text" name="name" id="name" required :disabled="sending || sent">
             </div>
 
             <div class="input-group">
                 <label for="email">Email: *</label>
-                <input class="input" type="email" name="email" id="email" required :disabled="sending">
+                <input class="input" type="email" name="email" id="email" required :disabled="sending || sent">
             </div>
 
             <div class="input-group">
                 <label for="message">Message: *</label>
-                <textarea class="input resize-none" name="message" id="message" cols="30" rows="10" required :disabled="sending" ref="message"></textarea>
+                <textarea class="input resize-none" name="message" id="message" cols="30" rows="10" required :disabled="sending || sent" ref="message"></textarea>
             </div>
 
-            <input class="submit-button bg-primary-dark text-white border border-primary-light py-2 px-4 cursor-pointer rounded shadow appearance-none" type="submit" value="Submit" :disabled="sending">
+            <input class="submit-button bg-primary-dark text-white border border-primary-light py-2 px-4 cursor-pointer rounded shadow appearance-none" type="submit" value="Submit" :disabled="sending || sent">
         </form>
     </div>
 </template>
@@ -63,6 +67,7 @@
                 }).then(() => {
                     this.sent = true;
                     this.sending = false;
+                    this.$parent.$el.scrollTo(0, 0); // Scroll to top
                 })
                 .catch(error => alert(error));
             }
