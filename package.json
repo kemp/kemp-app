@@ -17,7 +17,7 @@
     "autosize": "^4.0.2",
     "cross-env": "^5.2.0",
     "glob-all": "^3.1.0",
-    "laravel-mix": "^4.0.14",
+    "laravel-mix": "^4.1.14",
     "nprogress": "^0.2.0",
     "purgecss-webpack-plugin": "^1.4.0",
     "resolve-url-loader": "2.3.1",
