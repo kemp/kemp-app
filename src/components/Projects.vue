@@ -19,7 +19,7 @@
             <p class="pb-2" v-if="project.liveUrl"><strong>See it live:</strong> <a :href="project.liveUrl" target="_blank">{{ project.name }}<img src="/icons/open_in_new.svg" class="h-4" alt=""></a></p>
         </div>
         
-        <p>For more projects, check out <a href="https://github.com/rockhopper72">my GitHub</a>.</p>
+        <p>For more projects, check out <a href="https://github.com/kemp">my GitHub</a>.</p>
     </div>
 </template>
 <script>
