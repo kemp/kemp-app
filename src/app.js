@@ -1,6 +1,6 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import nprogress from 'nprogress'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import nprogress from 'nprogress';
 
 Vue.use(VueRouter);
 

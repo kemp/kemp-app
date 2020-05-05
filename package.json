@@ -16,16 +16,18 @@
   "dependencies": {
     "autosize": "^4.0.2",
     "cross-env": "^5.2.0",
-    "glob-all": "^3.1.0",
-    "laravel-mix": "^4.1.2",
+    "laravel-mix": "^5.0.4",
+    "laravel-mix-tailwind": "^0.1.0",
     "nprogress": "^0.2.0",
-    "purgecss-webpack-plugin": "^1.4.0",
-    "resolve-url-loader": "2.3.1",
-    "sass": "^1.17.2",
-    "sass-loader": "7.*",
     "tailwindcss": "^0.7.4",
-    "vue": "^2.6.8",
+    "vue": "^2.6.11",
     "vue-router": "^3.0.2",
-    "vue-template-compiler": "^2.6.8"
+    "vue-template-compiler": "^2.6.11"
+  },
+  "devDependencies": {
+    "laravel-mix-purgecss": "^5.0.0",
+    "resolve-url-loader": "^3.1.0",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2"
   }
 }
