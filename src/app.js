@@ -7,24 +7,29 @@ Vue.use(VueRouter);
 import App from './components/App.vue';
 
 import Home from './components/Home.vue';
-import Projects from './components/Projects.vue';
+import Portfolio from './components/Portfolio.vue';
 import Contact from './components/Contact.vue';
 
 const routes = [
     {
         path: '/',
         name: 'home', 
-        component: Home,
-        meta: {
-            title: 'Steven Kemp',
+        redirect: {
+            name: 'portfolio'
+        },
+    },
+    {
+        path: '/projects',
+        redirect: {
+            name: 'portfolio',
         }
     },
     { 
-        path: '/projects', 
-        name: 'projects', 
-        component: Projects,
+        path: '/portfolio', 
+        name: 'portfolio', 
+        component: Portfolio,
         meta: {
-            title: 'Projects - Steven Kemp',
+            title: 'Portfolio - Steven Kemp',
         }
     },
     { 
