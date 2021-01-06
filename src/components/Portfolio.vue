@@ -57,14 +57,6 @@
                     return rv;
                 }, {});
             },
-            sortObject: function(o) {
-                console.log(o);
-                let sorted = Object.keys(o).sort((a, b) => b - a);
-                console.log(sorted);
-                let result = sorted.reduce((r, k) => (r[k] = o[k], r), {})
-                console.log(result);
-                return result;
-            },
         },
 
         computed: {
@@ -77,7 +69,7 @@
                 return this.projects.filter(project => this.intersect(project.keywords, this.filteredKeywords).length > 0);
             },
             groupedFilteredProjects: function() {
-                return this.sortObject(this.groupBy(this.filteredProjects, 'date'));
+                return this.groupBy(this.filteredProjects, 'date');
             }
         },
 
