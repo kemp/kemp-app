@@ -58,6 +58,13 @@ export default {
             sourceUrl: 'https://github.com/kemp/small-town-ships'
         },
         { 
+            name: 'Secret Santa', 
+            description: 'A simple people randomizer primarily for use in Secret Santa drawings. Allows the drawings to be secret from everyone, including the creator. Live URL available upon request.',
+            date: '2019',
+            keywords: ['PHP', 'Laravel', 'SQL', 'CSS/Sass', 'TailwindCSS', 'Live'], 
+            sourceUrl: 'https://github.com/kemp/secretsanta'
+        },
+        { 
             name: 'Captures by Cayla', 
             description: 'Featuring a fully-custom designed interface, this photography portfolio website features web-optimized images and custom tabular navigation between image groups.',
             date: '2019',
