@@ -9,7 +9,7 @@
             <li><router-link :to="{ name: 'contact' }">Contact</router-link></li>
         </ul>
 
-        <div class="max-w-md px-4 mx-auto">
+        <div class="max-w-xl px-4 mx-auto">
             <transition :name="$parent.transition" mode="out-in">
                 <router-view class="mb-16 mx-auto"></router-view>
             </transition>

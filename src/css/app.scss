@@ -1,6 +1,10 @@
 $primary-dark: midnightblue;
 $primary-light: ghostwhite;
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* pacifico-regular - latin */
 /* Pacifico-Regular.ttf: Copyright 2011 The Pacifico Project Authors (https://github.com/Fonthausen/Pacifico) */
 @font-face {
@@ -41,7 +45,7 @@ $primary-light: ghostwhite;
 /* purgecss end ignore */
 
 a {
-    @apply text-primary-dark;
+    @apply underline;
 }
 
 [v-cloak] {
@@ -55,7 +59,7 @@ a {
         @apply no-underline text-primary-dark py-2 px-4 inline-block border-black border-b-2;
 
         &.router-link-active {
-            @apply border-b-4 text-grey-dark;
+            @apply border-b-4 text-gray-800;
         }
     }
 }
@@ -64,7 +68,7 @@ a {
 
 .contact-form {
     .input {
-        @apply w-full py-2 px-1 mb-1 rounded border border-grey-light text-lg font-sans;
+        @apply w-full py-2 px-1 mb-1 rounded border border-gray-200 text-lg font-sans;
     }
 
     .input-group {
@@ -85,66 +89,24 @@ a {
     background-position: center 20%;
 }
 
-/**
- * This injects Tailwind's base styles, which is a combination of
- * Normalize.css and some additional base styles.
- *
- * You can see the styles here:
- * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
- *
- * If using `postcss-import`, use this import instead:
- *
- * @import "tailwindcss/preflight";
- */
-@tailwind preflight;
+.dash-middle::before,
+.dash-middle::after {
+    background-color: $primary-dark;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 49%;
+}
 
-/**
- * This injects any component classes registered by plugins.
- *
- * If using `postcss-import`, use this import instead:
- *
- * @import "tailwindcss/components";
- */
-@tailwind components;
 
-/**
- * Here you would add any of your custom component classes; stuff that you'd
- * want loaded *before* the utilities so that the utilities could still
- * override them.
- *
- * Example:
- *
- * .btn { ... }
- * .form-input { ... }
- *
- * Or if using a preprocessor or `postcss-import`:
- *
- * @import "components/buttons";
- * @import "components/forms";
- */
-@import "./components/nprogress";
+.dash-middle::before {
+  right: 0.5em;
+  margin-left: -50%;
+}
 
-/**
- * This injects all of Tailwind's utility classes, generated based on your
- * config file.
- *
- * If using `postcss-import`, use this import instead:
- *
- * @import "tailwindcss/utilities";
- */
-@tailwind utilities;
-
-/**
- * Here you would add any custom utilities you need that don't come out of the
- * box with Tailwind.
- *
- * Example :
- *
- * .bg-pattern-graph-paper { ... }
- * .skew-45 { ... }
- *
- * Or if using a preprocessor or `postcss-import`:
- *
- * @import "utilities/background-patterns";
- * @import "utilities/skew-transforms";
- */
+.dash-middle::after {
+  left: 0.5em;
+  margin-right: -50%;
+}
