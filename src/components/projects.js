@@ -39,7 +39,7 @@ export default {
         { 
             name: 'Blood Pressure Logger', 
             description: 'Created to learn more about serverless applications, blood pressure logger is a simple web application which allows a user to store blood pressure data and view their previous datapoints. It makes use of AWS Lambda functions and DynamoDB.', 
-            keywords: ['Javascript', 'Amazon Web Services', 'DynamoDB', 'Serverless'],
+            keywords: ['Javascript', 'Serverless'],
             date: '2020',
             sourceUrl: 'https://github.com/kemp/blood-pressure-logger'
         },
@@ -54,7 +54,7 @@ export default {
             name: 'Small Town Ships', 
             description: 'A fictional e-commerce site for purchasing different types of battleships. The primary focus of this project was to learn about Secure Software Development. As such, STS is resistant to SQL Injection, Cross-site scripting, and uses password hashing.',
             date: '2019',
-            keywords: ['Java', 'E-Commerce', 'Secure Software Development', 'Team'], 
+            keywords: ['Java', 'E-Commerce', 'SQL', 'Secure Software Development', 'Team'], 
             sourceUrl: 'https://github.com/kemp/small-town-ships'
         },
         { 
@@ -83,7 +83,7 @@ export default {
         { 
             name: 'DeathCrystals', 
             description: 'Created when I was 15 years old, DeathCrystals is a Minecraft server plugin which allows a user to restore the contents of their inventory after they die.', 
-            keywords: ['Java', 'Team'], 
+            keywords: ['Java', 'Team', 'APIs'], 
             date: '2014',
             sourceUrl: 'https://github.com/Quartz-Dev/DeathCrystals'
         },

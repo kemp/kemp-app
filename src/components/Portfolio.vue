@@ -2,8 +2,16 @@
     <div>
         <div class="mb-4">
             <p> 
-                <span v-for="keyword in allKeywords"><button @click="toggleFilter(keyword)" class="py-1 px-2 m-1 border border-grey rounded-full shadow" :class="{ 'bg-primary-dark text-primary-light': filteredKeywords.indexOf(keyword) >= 0 , 'hover:bg-grey-lighter': filteredKeywords.indexOf(keyword) == -1}">{{ keyword }}</button></span>
-                <span v-if="filteredKeywords.length"><button class="py-1 px-2 m-1 border border-grey rounded-full shadow" @click="clearFilters">&times; Clear filters</button></span>
+                <span v-for="[keyword, count] in allKeywords">
+                    <button 
+                        @click="toggleFilter(keyword)" 
+                        class="py-1 px-2 m-1 border border-grey rounded-full shadow" 
+                        :class="{ 'bg-primary-dark text-primary-light': filteredKeywords.indexOf(keyword) >= 0 , 'hover:bg-grey-lighter': filteredKeywords.indexOf(keyword) == -1, 'text-sm': count == 1, 'text-lg': count > 3}"
+                    >
+                        {{ keyword }} ({{ count }})
+                    </button>
+                </span>
+                <span v-if="filteredKeywords.length"><button class="py-1 px-2 m-1" @click="clearFilters">&times; Clear filters</button></span>
             </p>
         </div>
 
@@ -61,7 +69,16 @@
 
         computed: {
             allKeywords: function() {
-                return [...new Set(this.projects.flatMap((project) => project.keywords).sort())];
+                let keywords = this.projects.flatMap((project) => project.keywords).sort();
+
+                // https://stackoverflow.com/a/11649321/2544756
+                let groupedKeywords = keywords.reduce(function(obj, item) {
+                    obj[item] = (obj[item] || 0) + 1;
+                    return obj;
+                }, {});
+
+                return Object.entries(groupedKeywords)
+                    .sort(([,a],[,b]) => b - a)
             },
             filteredProjects: function() {
                 if (this.filteredKeywords.length == 0) return this.projects;
