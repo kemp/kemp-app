@@ -5,8 +5,8 @@
                 <span v-for="[keyword, count] in allKeywords">
                     <button 
                         @click="toggleFilter(keyword)" 
-                        class="py-1 px-2 m-1 border border-grey rounded-full shadow" 
-                        :class="{ 'bg-primary-dark text-primary-light': filteredKeywords.indexOf(keyword) >= 0 , 'hover:bg-grey-lighter': filteredKeywords.indexOf(keyword) == -1, 'text-sm': count == 1, 'text-lg': count > 3}"
+                        class="py-1 px-2 m-1 border border-grey rounded-full shadow text-sm" 
+                        :class="{ 'bg-primary-dark text-primary-light': filteredKeywords.indexOf(keyword) >= 0 , 'hover:bg-grey-lighter': filteredKeywords.indexOf(keyword) == -1, 'text-xs': count == 1, 'font-semibold': count > 3}"
                     >
                         {{ keyword }} ({{ count }})
                     </button>
