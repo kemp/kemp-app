@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="mb-4">
-            <p>Filter by keywords: 
+            <p> 
                 <span v-for="keyword in allKeywords"><button @click="toggleFilter(keyword)" class="py-1 px-2 m-1 border border-grey rounded-full shadow" :class="{ 'bg-primary-dark text-primary-light': filteredKeywords.indexOf(keyword) >= 0 , 'hover:bg-grey-lighter': filteredKeywords.indexOf(keyword) == -1}">{{ keyword }}</button></span>
                 <span v-if="filteredKeywords.length"><button class="py-1 px-2 m-1 border border-grey rounded-full shadow" @click="clearFilters">&times; Clear filters</button></span>
             </p>
