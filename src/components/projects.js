@@ -4,13 +4,20 @@ export default {
             name: 'CamFlip Chrome Extension', 
             description: 'Creates a virtual webcam in your browser which is horizontally flipped. This is useful in many video chat applications and distance learning.', 
             date: '2021',
-            keywords: ['Browser extension', 'Javascript'], 
+            keywords: ['Browser extension', 'Javascript', 'Live'], 
             liveUrl: 'https://chrome.google.com/webstore/detail/camflip/jgnejnfdbomaelibbccppknilnnhklnk', 
+        },
+        { 
+            name: 'CamFlip Payment Store', 
+            description: 'A web application allowing the user to pay for a premium version of CamFlip. Communicates directly with the extension and uses Stripe for payment processing.', 
+            date: '2021',
+            keywords: ['PHP', 'Laravel', 'E-Commerce', 'SQL', 'Live'], 
+            liveUrl: 'https://camflip.net/purchase', 
         },
         { 
             name: 'Math Learning Machine', 
             description: 'Capstone project at Kennesaw State University. Uses machine learning to identify handwritten mathematical symbols and digits and parses them into a LaTeX equation.', 
-            keywords: ['Machine Learning', 'Python', 'Flask', 'Docker', 'TypeScript', 'SCSS', 'LaTeX', 'Team'],
+            keywords: ['Machine Learning', 'Python', 'Flask', 'Docker', 'TypeScript', 'CSS/Sass', 'LaTeX', 'Team'],
             date: '2020',
             sourceUrl: 'https://github.com/MathLearningMachine'
         },
@@ -24,7 +31,7 @@ export default {
         { 
             name: 'VideoMirror Chrome Extension', 
             description: 'Leading solution allowing you to flip (left-to-right) videos on a webpage. It has over 100,000 users on the Chrome Web Store and 4.7 stars.', 
-            keywords: ['Browser extension', 'Javascript'],
+            keywords: ['Browser extension', 'Javascript', 'Live'],
             date: '2020',
             liveUrl: 'https://chrome.google.com/webstore/detail/videomirror/lgknkdljklhkafjfekjjbldfcdnmdpkh', 
             sourceUrl: 'https://github.com/kemp/VideoMirror'
@@ -47,21 +54,21 @@ export default {
             name: 'Small Town Ships', 
             description: 'A fictional e-commerce site for purchasing different types of battleships. The primary focus of this project was to learn about Secure Software Development. As such, STS is resistant to SQL Injection, Cross-site scripting, and uses password hashing.',
             date: '2019',
-            keywords: ['Java', 'Secure Software Development', 'Team'], 
+            keywords: ['Java', 'E-Commerce', 'Secure Software Development', 'Team'], 
             sourceUrl: 'https://github.com/kemp/small-town-ships'
         },
         { 
             name: 'Captures by Cayla', 
             description: 'Featuring a fully-custom designed interface, this photography portfolio website features web-optimized images and custom tabular navigation between image groups.',
             date: '2019',
-            keywords: ['HTML', 'SCSS', 'CSS', 'Javascript'], 
+            keywords: ['HTML', 'CSS/Sass', 'Javascript'], 
             liveUrl: 'https://kemp.github.io/capturesbycayla.com/', 
             sourceUrl: 'https://github.com/kemp/capturesbycayla.com'
         },
         { 
             name: 'Notarizer', 
             description: 'Built to ensure integrity, Notarizer is an online file timestamping service allowing a user to ensure that a file existed since a given point in time. It has been in constant operation since 2018.', 
-            keywords: ['PHP', 'Laravel', 'SVG', 'SQL', 'Test-driven development'], 
+            keywords: ['PHP', 'Laravel', 'SVG', 'SQL', 'Test-driven development', 'Live'], 
             date: '2018',
             liveUrl: 'https://notarizer.app', 
             sourceUrl: 'https://github.com/notarizer/notarizer'
