@@ -30,7 +30,7 @@ export default {
         },
         { 
             name: 'VideoMirror Chrome Extension', 
-            description: 'Leading solution allowing you to flip (left-to-right) videos on a webpage. It has over 100,000 users on the Chrome Web Store and 4.7 stars.', 
+            description: 'Leading solution allowing you to flip (left-to-right) videos on a webpage. It has 4.7 stars and over 150,000 users on the Chrome Web Store.', 
             keywords: ['Browser extension', 'Javascript', 'Live'],
             date: '2020',
             liveUrl: 'https://chrome.google.com/webstore/detail/videomirror/lgknkdljklhkafjfekjjbldfcdnmdpkh', 
