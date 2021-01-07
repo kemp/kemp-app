@@ -41,7 +41,8 @@ export default {
             description: 'Created to learn more about serverless applications, blood pressure logger is a simple web application which allows a user to store blood pressure data and view their previous datapoints. It makes use of AWS Lambda functions and DynamoDB.', 
             keywords: ['Javascript', 'Serverless'],
             date: '2020',
-            sourceUrl: 'https://github.com/kemp/blood-pressure-logger'
+            sourceUrl: 'https://github.com/kemp/blood-pressure-logger',
+            liveUrl: 'http://blood-pressure-logger-kemp.s3-website.us-east-2.amazonaws.com/index.html',
         },
         { 
             name: 'Java to Julia Processor', 
