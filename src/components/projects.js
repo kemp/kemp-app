@@ -63,7 +63,7 @@ export default {
             description: 'A simple people randomizer primarily for use in Secret Santa drawings. Allows the drawings to be secret from everyone, including the creator. Live URL available upon request.',
             date: '2019',
             keywords: ['PHP', 'Laravel', 'SQL', 'CSS/Sass', 'TailwindCSS', 'Live'], 
-            sourceUrl: 'https://github.com/kemp/secretsanta'
+            sourceUrl: 'https://github.com/kemp/secret-santa'
         },
         { 
             name: 'Captures by Cayla', 
