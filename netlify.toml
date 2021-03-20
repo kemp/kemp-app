@@ -1,3 +1,10 @@
+# Redirect to wedding website
+[[redirects]]
+  from = "/w"
+  to = "https://stevenandcassidy.com"
+  status = 301
+  force = true
+
 # The following redirect is intended for use with most SPAs that handle
 # routing internally.
 [[redirects]]
