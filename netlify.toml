@@ -1,7 +1,7 @@
 # Redirect to wedding website
 [[redirects]]
   from = "/w"
-  to = "https://stevenandcassidy.com/rsvp"
+  to = "https://stevenandcassidy.com/"
   status = 302
   force = true
 
