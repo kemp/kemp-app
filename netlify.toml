@@ -4,6 +4,12 @@
   to = "https://stevenandcassidy.com/"
   status = 302
   force = true
+  
+[[redirects]]
+  from = "/c"
+  to = "https://sites.google.com/view/cassidy-okenica"
+  status = 302
+  force = true
 
 # The following redirect is intended for use with most SPAs that handle
 # routing internally.
