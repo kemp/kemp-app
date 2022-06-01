@@ -48,7 +48,7 @@ Output files will be in `/dist`.
 Show the website using a static file server, such as `http-server`:
 
 ```
-npx http-server dist/
+npm run serve
 ```
 
 ## Contact
