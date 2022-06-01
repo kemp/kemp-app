@@ -23,24 +23,33 @@ In addition, thanks to:
 - [autosize](https://github.com/jackmoore/autosize)
 
 ## Installation
-Once you have cloned and `cd`'ed into the project, install NPM dependencies using [Yarn](https://yarnpkg.com/lang/en/docs/install/):
+Once you have cloned and `cd`'ed into the project, install NPM dependencies using NPM:
 
 ```
-yarn
+npm i
 ```
 
 ### Build
 To build this project, run:
 
 ```
-yarn dev
+npm run dev
 
 # or
 
-yarn prod
+npm run prod
 ```
 
 Output files will be in `/dist`.
+
+
+### Static Server
+
+Show the website using a static file server, such as `http-server`:
+
+```
+npx http-server dist/
+```
 
 ## Contact
 
