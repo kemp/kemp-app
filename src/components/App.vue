@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full md:w-1/2 px-2 pt-8 md:overflow-y-scroll scrolling-touch max-h-screen">
+    <div class="w-full px-2 pt-8 md:overflow-y-scroll scrolling-touch max-h-screen">
         <h1 class="text-4xl md:text-5xl font-cursive text-center">Steven Kemp</h1>
         <h2 class="font-mono text-lg mt-4 text-center">Full-Stack Web Developer</h2>
 
@@ -10,9 +10,11 @@
         </ul>
 
         <div class="max-w-xl px-4 mx-auto">
-            <transition :name="$parent.transition" mode="out-in">
-                <router-view class="mb-16 mx-auto"></router-view>
-            </transition>
+            <router-view v-slot="{ Component }" class="mb-16 mx-auto">
+                <transition :name="$root.transition" mode="out-in">
+                    <component :is="Component" />
+                </transition>
+            </router-view>
         </div>
     </div>
 </template>

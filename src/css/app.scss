@@ -87,6 +87,7 @@ a {
 .photo {
     background: url('../pics/me.jpg') $primary-dark;
     background-position: center 20%;
+    background-size: cover;
 }
 
 .dash-middle::before,
