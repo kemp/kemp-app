@@ -1,5 +1,5 @@
 import { createApp, h } from 'vue';
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router';
 import nprogress from 'nprogress';
 
 import App from './components/App.vue';
@@ -41,7 +41,7 @@ const routes = [
 ]
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: process.env.NODE_ENV === 'production' ? createWebHistory() : createWebHashHistory(),
     routes, // short for `routes: routes`
 })
 
