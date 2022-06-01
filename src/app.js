@@ -1,8 +1,6 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
+import { createApp, h } from 'vue';
+import { createRouter, createWebHistory } from 'vue-router';
 import nprogress from 'nprogress';
-
-Vue.use(VueRouter);
 
 import App from './components/App.vue';
 
@@ -42,9 +40,9 @@ const routes = [
     },
 ]
 
-const router = new VueRouter({
-    mode: 'history',
-    routes // short for `routes: routes`
+const router = createRouter({
+    history: createWebHistory(),
+    routes, // short for `routes: routes`
 })
 
 router.beforeEach((to, from, next) => {
@@ -60,13 +58,12 @@ router.afterEach((to, from) => {
     nprogress.done();
 });
 
-const app = new Vue({
+const app = createApp({
     data() {
         return {
             transition: 'slide-right',
         };
     },
-    router,
     watch: {
         '$route' (to, from) {
             const routePaths = routes.map(route => route.path);
@@ -75,6 +72,9 @@ const app = new Vue({
             this.transition = toPos < fromPos ? 'slide-right' : 'slide-left';
         }
     },
-    el: '#app',
-    render: createElement => createElement(App),
+    render: () => h(App),
 });
+
+app.use(router);
+
+app.mount('#app');

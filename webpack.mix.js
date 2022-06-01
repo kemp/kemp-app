@@ -1,10 +1,9 @@
 const mix = require('laravel-mix');
-const tailwindcss = require('tailwindcss');
 
 mix.js('src/app.js', 'dist/').vue()
     .sass('src/css/app.scss', 'css/')
     .options({
-        postCss: [ tailwindcss('./tailwind.config.js') ],
+        postCss: [ require('tailwindcss') ],
     })
     .copy('src/*.html', 'dist/')
     .copy('src/pics/', 'dist/pics')
